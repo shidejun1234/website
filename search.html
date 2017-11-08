@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度一下</title>
+
+<link rel="stylesheet" href="css/baidu.css" type="text/css"/>
+<link rel="icon" href="img/yang.ico"  />
+<script src="js/baidu.js"></script>
+
+<!--<style>
+	#div1{
+			width:600px;
+			
+			top:30px;
+			margin:0 auto;
+		}
+	#txt1{
+		
+		width:500px;
+		height:39px;
+		border:1px solid #CCC;
+		font-size:18px;
+		padding:5px;
+		margin:0;
+		}
+	#btn1{
+		width:66px;
+		height:50px;
+		margin:6px 6px;
+		border:0px;
+		cursor:pointer;
+		background-color:#33F;
+		color:white;
+		font-size:18px;
+		}
+	p{margin:0px;}
+	#ul1{
+		width:510px;
+		border:1px solid #CCC;
+		margin:0;padding:0px;
+		display:none;
+		}
+	li{
+		list-style:none;
+		margin:0;padding:0px;
+		}
+	li a{
+		text-decoration:none;
+		font-size:18px;
+		color:black;
+		display:block;
+		line-height:50px;
+		}
+	li a:hover{
+		background-color:blue;color:white;
+		}
+</style>-->
+<!--<script>
+	function beijing(data){
+		var oUl1=document.getElementById('ul1');
+		if(data.s.length){
+			
+			oUl1.style.display= 'block';
+			var html="";
+			for(var i=0;i<data.s.length;i++){
+				html += '<li><a target="_blank" href="http://www.baidu.com/s?wd='+data.s[i]+'">'+ data.s[i] +'</a></li>';	
+			}
+			oUl1.innerHTML=html;
+		}else{
+			oUl1.style.display="none";
+			}
+		
+	}
+	window.onload=function(){
+			var oTxt1=document.getElementById('txt1');
+			var oBtn=document.getElementById('btn1');
+			var oUl1=document.getElementById('ul1');
+			oTxt1.placeholder="欢迎你"
+			oTxt1.onkeydown=function(event){
+				var x=event.keyCode;
+				if(x==13){
+					window.open("http://www.baidu.com/s?wd="+oTxt1.value);
+					}
+			}
+			
+			oBtn.onclick=function(){
+				
+				window.open("http://www.baidu.com/s?wd="+oTxt1.value);
+			}
+			
+			oTxt1.onkeyup=function (){
+				if(this.value!=' '){
+					oScript=document.createElement('script');
+					oScript.src="http://suggestion.baidu.com/su?wd="+this.value+"&cb=beijing";
+					document.body.appendChild(oScript);	
+				}else{
+						oUl1.style.display="none";
+					 }
+			}
+	}
+	
+</script>-->
+</head>
+
+<body>
+<div id="div1">
+	<p><input type="text" id="txt1"  /><input type="button" value="搜索" id="btn1" /></p>
+    <ul id="ul1">
+		
+	</ul>
+</div>
+
+
+</body>
+</html>
